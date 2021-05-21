@@ -33,12 +33,23 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             AdBanner(adUnit: UITexts.admobBannerApp),
+            Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.red,
+              width: MediaQuery.of(context).size.width,
+              height: 600,
+            ),
             AdBanner(adUnit: UITexts.admobBannerSquare),
+            Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.yellow,
+              width: MediaQuery.of(context).size.width,
+              height: 600,
+            ),
           ],
         ),
       ),
