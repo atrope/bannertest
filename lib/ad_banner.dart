@@ -19,10 +19,8 @@ extension StringParsing on String {
 class AdBanner extends StatefulWidget {
   const AdBanner({
     required this.adUnit,
-    this.item,
   });
   final String adUnit;
-  final dynamic item;
   @override
   _AdBannerState createState() => _AdBannerState();
 }
@@ -88,7 +86,6 @@ class _AdBannerState extends State<AdBanner> {
               )
             ],
           ),
-          if (widget.item != null) widget.item,
         ],
       ),
     );
